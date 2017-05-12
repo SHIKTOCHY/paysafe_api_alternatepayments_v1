@@ -784,13 +784,16 @@ Payment objects are used to define additional values that can be supplied with y
 |Element                 |Type                   |Description |
 |---                     |---                    |--- |
 |descriptor              |string<br/>`length=X`  |This is the merchant descriptor that will be displayed on the customer's bank statement.|
-|sepa                    |[object](#sepa)        |The customsrs SEPA bank account details.|
+|sepa                    |[object](#sepa)        |The customer's SEPA bank account details.|
 
 ```
 {
     "sofort": {
         "descriptor": "custom descriptor",
         "sepa": {
+            "accountHolderName": "John Doe",
+            "bic": "ABNANL2APIP",
+            "iban": "DE89370400440532013000" 
         }
     }
 }
